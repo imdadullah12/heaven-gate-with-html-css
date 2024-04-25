@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.parent {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.left,
+.right {
+  transition: all 2s;
+}
+
+.parent:hover .left {
+  transform: translate(-100%);
+}
+
+.parent:hover .right {
+  transform: translate(100%);
+}
+
+body:hover .text {
+  transform: scale(1);
+}
+
+.text {
+  transition: all 1s;
+  transition-delay: 0.3s;
+  color: rgb(0, 0, 0);
+  transform: scale(0);
+}
+
+.greeting {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./heaven.jpg");
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+h1 {
+  font-size: 100px;
+  margin-top: -10px;
+}
